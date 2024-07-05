@@ -6,7 +6,8 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medicSearch.settings')
+    #Aqui é chamado o ambiente de execução(dev,prod,test)
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medicSearch.settings.development')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
